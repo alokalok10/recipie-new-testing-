@@ -1,0 +1,81 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+/* Base styles for the recipe card */
+.recipe {
+	border-radius: 10px;
+	box-shadow: 0px 5px 20px rgb(63, 60, 60);
+	margin: 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	background-image: linear-gradient(
+	  to right,
+	  #e4afcb 0%,
+	  #0ce50c 0%,
+	  #b8cbb8 0%,
+	  #e2c58b 30%,
+	  #c2ce9c 64%,
+	  #48c4c4 100%
+	);
+	align-items: center;
+	min-width: 40%;
+	font-family: 'Lobster', cursive;
+	transition: transform 0.3s; /* Adding a transition for hover effect */
+}
+
+/* Styling for the recipe image */
+.image {
+  border-radius: 10px;
+  margin: 0px 0px 20px 0px;
+}
+
+/* Hover effect */
+.recipe:hover {
+	transform: scale(1.05); /* Enlarge the card on hover */
+	background: linear-gradient(to right, #48c4c4, #e4afcb); /* Modify the background color on hover */
+	box-shadow: 0px 8px 25px rgb(63, 60, 60); /* Modify the box shadow on hover */
+  }
+
+/* Color blinking effect */
+@keyframes colorBlink {
+  0% {
+    background-image: linear-gradient(
+      to right,
+      #e4afcb 0%,
+      #0ce50c 0%,
+      #b8cbb8 0%,
+      #e2c58b 30%,
+      #c2ce9c 64%,
+      #48c4c4 100%
+    );
+  }
+  50% {
+    background-image: linear-gradient(
+      to right,
+      #e4afcb 0%,
+      #0ce50c 0%,
+      #b8cbb8 0%,
+      #e2c58b 30%,
+      #c2ce9c 64%,
+      #48c4c4 100%
+    );
+  }
+  100% {
+    background-image: linear-gradient(
+      to right,
+      #48c4c4 0%,
+      #c2ce9c 30%,
+      #e2c58b 64%,
+      #b8cbb8 100%,
+      #0ce50c 100%,
+      #e4afcb 100%
+    );
+  }
+}
+
+.recipe:hover {
+  animation: colorBlink 2s infinite; /* Apply color blinking effect on hover */
+}
+
